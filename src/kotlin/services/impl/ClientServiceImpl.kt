@@ -1,7 +1,7 @@
-package ClientService.impl
+package services.impl
 
-import ClientService.ClientService
 import org.springframework.stereotype.Service
+import services.ClientService
 
 @Service("ClientService")
 class ClientServiceImpl : ClientService {
