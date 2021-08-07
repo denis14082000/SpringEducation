@@ -14,4 +14,10 @@ class Client {
 
     @Column(name = "name")
     private var name : String? = null
+
+    override fun toString(): String {
+        return "Client Information" +
+                "\n Id: " + id +
+                "\n Name: " + name
+    }
 }

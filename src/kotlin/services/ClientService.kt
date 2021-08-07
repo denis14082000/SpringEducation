@@ -1,5 +1,7 @@
 package services
 
+import entities.Client
+
 interface ClientService {
-    fun getClientId() : Int
+    fun findClientById(id : Int) : Client
 }
