@@ -16,7 +16,7 @@ class Client {
     private var name : String? = null
 
     override fun toString(): String {
-        return "Client Information" +
+        return "\n Client Information" +
                 "\n Id: " + id +
                 "\n Name: " + name
     }

@@ -13,7 +13,10 @@ class ClientServiceImpl : ClientService {
     private lateinit var clientDao : ClientDao
 
     override fun findClientById(id : Int): Client {
-        val client = clientDao.findClientById(id)
-        return client
+        return clientDao.findClientById(id)
+    }
+
+    override fun findAll(): List<Client> {
+        return clientDao.findAllClient()
     }
 }
