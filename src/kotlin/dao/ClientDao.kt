@@ -3,6 +3,7 @@ package dao
 import entities.Client
 import org.hibernate.cfg.Configuration
 import org.springframework.stereotype.Service
+import javax.transaction.Transactional
 
 @Service
 class ClientDao {
@@ -22,6 +23,27 @@ class ClientDao {
         transaction.commit()
         session.close()
         return client
+    }
+
+
+    fun removeClient(id : Int) : String {
+        val session = sessionFactory.openSession()
+        val transaction = session.beginTransaction()
+        val clientToDelete = session.get(Client::class.java, id)
+        session.remove(clientToDelete)
+        transaction.commit()
+        session.close()
+        return "Success"
+    }
+
+    fun addClient(name : String) : Client {
+        val session = sessionFactory.openSession()
+        val transaction = session.beginTransaction()
+        val clientToSave = Client(name)
+        session.save(clientToSave)
+        transaction.commit()
+        session.close()
+        return clientToSave
     }
 
 

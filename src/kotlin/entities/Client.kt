@@ -15,6 +15,14 @@ class Client {
     @Column(name = "name")
     private var name : String? = null
 
+    constructor() {
+
+    }
+
+    constructor(name : String) {
+        this.name = name
+    }
+
     override fun toString(): String {
         return "\n Client Information" +
                 "\n Id: " + id +

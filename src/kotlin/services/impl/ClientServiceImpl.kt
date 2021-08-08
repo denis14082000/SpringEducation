@@ -19,4 +19,12 @@ class ClientServiceImpl : ClientService {
     override fun findAll(): List<Client> {
         return clientDao.findAllClient()
     }
+
+    override fun removeClient(id : Int): String {
+        return clientDao.removeClient(id)
+    }
+
+    override fun saveClient(name : String) : Client {
+        return clientDao.addClient(name)
+    }
 }
