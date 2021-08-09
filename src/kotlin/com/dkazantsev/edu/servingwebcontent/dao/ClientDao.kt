@@ -1,9 +1,8 @@
-package dao
+package com.dkazantsev.edu.servingwebcontent.dao
 
-import entities.Client
+import com.dkazantsev.edu.servingwebcontent.entities.Client
 import org.hibernate.cfg.Configuration
 import org.springframework.stereotype.Service
-import javax.transaction.Transactional
 
 @Service
 class ClientDao {

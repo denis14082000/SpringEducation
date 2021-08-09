@@ -1,10 +1,10 @@
-package services.impl
+package com.dkazantsev.edu.servingwebcontent.services.impl
 
-import dao.ClientDao
-import entities.Client
+import com.dkazantsev.edu.servingwebcontent.dao.ClientDao
+import com.dkazantsev.edu.servingwebcontent.entities.Client
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import services.ClientService
+import com.dkazantsev.edu.servingwebcontent.services.ClientService
 
 @Service("ClientService")
 class ClientServiceImpl : ClientService {

@@ -1,6 +1,6 @@
-package services
+package com.dkazantsev.edu.servingwebcontent.services
 
-import entities.Client
+import com.dkazantsev.edu.servingwebcontent.entities.Client
 
 interface ClientService {
     fun findClientById(id : Int) : Client

@@ -1,4 +1,4 @@
-package entities
+package com.dkazantsev.edu.servingwebcontent.entities
 
 import javax.persistence.*
 
