@@ -25,15 +25,14 @@ class ClientDao {
 //    }
 //
 //
-//    fun removeClient(id : Int) : String {
-//        val session = sessionFactory.openSession()
-//        val transaction = session.beginTransaction()
-//        val clientToDelete = session.get(Client::class.java, id)
-//        session.remove(clientToDelete)
-//        transaction.commit()
-//        session.close()
-//        return "Success"
-//    }
+    fun removeClient(client : Client){
+        val session = sessionFactory.openSession()
+        val transaction = session.beginTransaction()
+        val clientToRemove = session.merge(client)
+        session.delete(clientToRemove)
+        transaction.commit()
+        session.close()
+    }
 
     fun addClient(clientToSave : Client) {
         val session = sessionFactory.openSession()

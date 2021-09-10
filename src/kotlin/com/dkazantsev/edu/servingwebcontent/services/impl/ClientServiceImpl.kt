@@ -20,9 +20,9 @@ class ClientServiceImpl : ClientService {
 //        return clientDao.findAllClient()
 //    }
 //
-//    override fun removeClient(id : Int): String {
-//        return clientDao.removeClient(id)
-//    }
+    override fun removeClient(client : Client){
+        clientDao.removeClient(client)
+    }
 
     override fun saveClient(clientToSave : Client){
         clientDao.addClient(clientToSave)

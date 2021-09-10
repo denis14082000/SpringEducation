@@ -23,6 +23,11 @@ class Client {
         this.name = name
     }
 
+    constructor(id : Int, name: String) {
+        this.id = id
+        this.name = name
+    }
+
     override fun toString(): String {
         return "\n Client Information" +
                 "\n Id: " + id +
