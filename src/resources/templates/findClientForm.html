@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Remove client</title>
+    <title>Add client</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
@@ -18,13 +18,21 @@
     </nav>
 </div>
 <div>
-    <form method="get" action="/removeClientForm/remove">
+    <form method="get" action="/findClientForm/find">
         <label>
             <input type="number" name="id" size="10">
             id
         </label>
-        <button type="submit">Удалить клиента</button>
+        <button type="submit">Найти</button>
     </form>
+</div>
+<div>
+    <label>
+        <textarea>
+
+        </textarea>
+        Client info
+    </label>
 </div>
 </body>
 </html>

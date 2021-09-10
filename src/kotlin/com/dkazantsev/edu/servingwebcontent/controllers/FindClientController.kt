@@ -8,21 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
-class RemoveClientController {
+class FindClientController {
 
     @Autowired
     lateinit var clientService : ClientService
 
-    @GetMapping("/removeClientForm")
-    fun removeClientForm(model : Model) : String {
-        return "removeClientForm"
+    @GetMapping("/findClientForm")
+    fun findClientForm(model : Model) : String {
+        return "findClientForm"
     }
 
-    @GetMapping("/removeClientForm/remove")
-    fun removeClient(@RequestParam id : Int, model: Model) : String {
-        val clientToRemove = clientService.findClientById(id)
-        clientService.removeClient(clientToRemove)
+    @GetMapping("/findClientForm/find")
+    fun findClient(@RequestParam id : Int, model: Model) : String {
+        println(clientService.findClientById(id))
         return "redirect:/"
     }
-
 }
