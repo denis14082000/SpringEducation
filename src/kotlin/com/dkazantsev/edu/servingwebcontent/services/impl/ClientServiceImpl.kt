@@ -11,20 +11,20 @@ class ClientServiceImpl : ClientService {
 
     @Autowired
     private lateinit var clientDao : ClientDao
+//
+//    override fun findClientById(id : Int): Client {
+//        return clientDao.findClientById(id)
+//    }
+//
+//    override fun findAll(): List<Client> {
+//        return clientDao.findAllClient()
+//    }
+//
+//    override fun removeClient(id : Int): String {
+//        return clientDao.removeClient(id)
+//    }
 
-    override fun findClientById(id : Int): Client {
-        return clientDao.findClientById(id)
-    }
-
-    override fun findAll(): List<Client> {
-        return clientDao.findAllClient()
-    }
-
-    override fun removeClient(id : Int): String {
-        return clientDao.removeClient(id)
-    }
-
-    override fun saveClient(name : String) : Client {
-        return clientDao.addClient(name)
+    override fun saveClient(clientToSave : Client){
+        clientDao.addClient(clientToSave)
     }
 }
