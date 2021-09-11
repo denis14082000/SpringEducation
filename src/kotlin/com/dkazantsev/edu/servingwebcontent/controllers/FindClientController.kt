@@ -20,7 +20,8 @@ class FindClientController {
 
     @GetMapping("/findClientForm/find")
     fun findClient(@RequestParam id : Int, model: Model) : String {
-        println(clientService.findClientById(id))
-        return "redirect:/"
+        val client = clientService.findClientById(id)
+        model.addAttribute("clientInfo", client.toString())
+        return "findClientForm"
     }
 }

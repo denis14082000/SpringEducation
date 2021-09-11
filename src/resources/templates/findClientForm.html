@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add client</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -13,7 +14,7 @@
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="addClientForm.html">Add client</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="removeClientForm">Remove client</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="findClientForm">Find client</a>
         <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
     </nav>
 </div>
@@ -26,13 +27,7 @@
         <button type="submit">Найти</button>
     </form>
 </div>
-<div>
-    <label>
-        <textarea>
-
-        </textarea>
-        Client info
-    </label>
+<div th:text="${clientInfo}">
 </div>
 </body>
 </html>
